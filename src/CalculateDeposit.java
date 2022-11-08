@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
-public class CalculateDeposit {
+public class CalculateDeposit {                                  // Молодец! Понятные имена переменных написаны с соблюдением lowerCamelCase и название классов. 
     double calculateComplexPercent(double amount, double yearRate, int year) {
         double pay = amount * Math.pow((1 + yearRate / 12), 12 * year);
         return round(pay, 2);
     }
 
-    double calculateSimplePercent(double amount, double yearRate
-            , int year) {
-        return round(amount + amount * yearRate
+    double calculateSimplePercent(double amount, double yearRate   // В соответствии с code style 
+            , int year) {                                          // при правильном переносе запятая остаётся в конце предыдущей строки
+        return round(amount + amount * yearRate                    // В соответствии с code style если выражение умещается в лимит — его переносить не надо
                 * year, 2);
     }
 
